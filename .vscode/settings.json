@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "webinterface.h": "c",
+        "stdio.h": "c"
+    }
+}
