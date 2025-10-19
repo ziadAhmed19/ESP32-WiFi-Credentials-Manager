@@ -2,6 +2,7 @@
 
 ## Web Interface Page
 
+```html
 <html>
   <body>
     <h2>Change WiFi SSID and Password</h2>
@@ -12,10 +13,11 @@
     </form>
   </body>
 </html>
+```
 
 ## Prerequisites
 
-- ESP-IDF v5.1.X
+- ESP-IDF v5.1.x
 
 ## Project Overview
 
@@ -25,13 +27,11 @@ The device runs in AP mode when not connected, serving a captive portal at `http
 
 ### Accessing the Captive Portal
 
-If your ESP32 is **not connected to any network**, type the following URL in your web browser:
-http://192.168.4.1/
+If your ESP32 is **not connected to any network**, type the following URL in your web browser:  
+`http://192.168.4.1/`
 
-
-If your ESP32 is **connected to a network**, find its current IP address and use:
-http://esp-current-ip/
-
+If your ESP32 is **connected to a network**, find its current IP address and use:  
+`http://esp-current-ip/`
 
 You can also use `curl` to change the WiFi credentials using:
 
@@ -56,7 +56,7 @@ webInterface_APSTA_init();
 Next, we start our web server with:
 
 ```c
-webInteface_start_webserver();
+webInterface_start_webserver();
 ```
 
 ### URI Handlers
@@ -96,5 +96,3 @@ char *pass_ptr = strstr(sPostBuffer, "password=");
 ### Debugging Tips
 - Make sure to monitor the logs using `ESP_LOGI` and `ESP_LOGW` to understand the flow of WiFi connection attempts.
 - Verify that all pointers and buffers are correctly allocated and freed to prevent memory leaks.
-
-This revised explanation aims for clarity and more logical flow, helping others understand your project's workings better.
